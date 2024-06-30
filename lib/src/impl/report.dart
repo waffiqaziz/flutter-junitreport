@@ -2,6 +2,8 @@
 // All rights reserved. Use of this source code is governed by a MIT-style
 // license that can be found in the LICENSE file.
 
+import 'dart:math';
+
 import 'package:intl/intl.dart';
 import 'package:xml/xml.dart';
 import 'package:testreport/testreport.dart';
@@ -85,14 +87,20 @@ class XmlReport implements JUnitReport {
       main = path;
     }
 
+    path = path.replaceAll('\\', '/');
+
     if (base.isNotEmpty && main.startsWith(base)) {
       main = main.substring(base.length);
       while (main.startsWith(_pathSeparator)) {
         main = main.substring(1);
       }
     }
-    return package +
-        main.replaceAll(_pathSeparator, '.').replaceAll(_dash, '_');
+
+    // Strip bas path until the 'test' directory
+    var splits = path.split('/');
+    var testIdx = max(0, splits.indexOf('test'));
+
+    return splits.sublist(testIdx).join('/').replaceAll(_pathSeparator, '.').replaceAll(_dash, '_');
   }
 
   List<XmlNode> _suiteChildren(

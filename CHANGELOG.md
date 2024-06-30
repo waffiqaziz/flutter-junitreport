@@ -1,6 +1,7 @@
-## 2.0.5
+## 2.0.6
 
 * Fixed dependencies
+* Shortened test name to relative path
 
 ## 2.0.2
 

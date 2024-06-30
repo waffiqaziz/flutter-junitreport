@@ -1,5 +1,5 @@
 name: junitreporter_flutter_3x
-version: 2.0.5
+version: 2.0.6
 description: Generate JUnit XML reports from dart test runs. Transforms the output of dart or flutter tests to
   JUnit style XML
 
