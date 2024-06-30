@@ -5,8 +5,8 @@
 import 'package:intl/intl.dart';
 import 'package:xml/xml.dart';
 import 'package:testreport/testreport.dart';
-import 'package:junitreport/junitreport.dart';
-import 'package:junitreport/src/impl/xml.dart';
+import 'package:junitreporter_flutter_3x/junitreporter_flutter_3x.dart';
+import 'package:junitreporter_flutter_3x/src/impl/xml.dart';
 
 class XmlReport implements JUnitReport {
   static final NumberFormat _milliseconds = NumberFormat('#####0.00#', 'en_US');

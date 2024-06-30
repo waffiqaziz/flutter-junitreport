@@ -3,7 +3,7 @@
 // license that can be found in the LICENSE file.
 
 import 'package:testreport/testreport.dart';
-import 'package:junitreport/src/impl/report.dart';
+import 'package:junitreporter_flutter_3x/src/impl/report.dart';
 
 /// Transformer to convert a [Report] to an xml String.
 abstract class JUnitReport {
