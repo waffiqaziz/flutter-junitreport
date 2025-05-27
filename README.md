@@ -11,7 +11,7 @@ Introduction
 This application can be used to convert the results of dart tests to JUnit xml reports. These XML reports can then be used by other tools like Jenkins CI.
 It is a fork from 
 
-* <https://github.com/TOPdesk/dart-flutter_junitreport>
+* <https://github.com/TOPdesk/dart-junitreport>
 * <https://github.com/derteufelqwe/dart-junitreport>
 
 which seems to not be maintained anymore.
