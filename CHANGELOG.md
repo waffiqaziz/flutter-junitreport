@@ -1,3 +1,7 @@
+## 2.0.7-dev.1
+
+* Fixed dependencies
+
 ## 2.0.6
 
 * Fixed dependencies

@@ -9,13 +9,14 @@ Introduction
 ------------
 
 This application can be used to convert the results of dart tests to JUnit xml reports. These XML reports can then be used by other tools like Jenkins CI.
-It is a fork from ``https://github.com/TOPdesk/dart-junitreporter_flutter_3x ``, which seems to not be maintained anymore.
+It is a fork from <https://github.com/TOPdesk/dart-flutter_junitreport> and <https://github.com/derteufelqwe/dart-junitreport>, which seems to not be maintained anymore.
 
 By running
 
 ```Shell
-dart test simple_test.dart --reporter json > example.jsonl
-dart pub global run junitreporter_flutter_3x :tojunit --input example.jsonl --output TEST-report.xml
+flutter test simple_test.dart --reporter json > example.jsonl
+
+dart pub global run flutter_junitreport :tojunit --input example.jsonl --output TEST-report.xml
 ```
 
 and the contents of `simple_test.dart` is
@@ -29,7 +30,7 @@ main() {
   });
 }
 ```
-    
+
 this program will generate 'TEST-report.xml' containing
 
 ```XML
@@ -48,7 +49,14 @@ For transforming Flutter tests reports, instead of passing `--reporter json`, yo
 Installation
 ------------
 
-Run `dart pub global activate junitreporter_flutter_3x ` to download the program and make a launch script available: `<dart-cache>/bin/tojunit`.
+Put inside your `pubspec.yaml` under dependencies
+
+```yml
+flutter_junitreport:
+    git:
+      url: https://github.com/waffiqaziz/flutter-junitreport.git
+      ref: main
+```
 
 If the `<dart-cache>/bin` directory is not on your path, you will get a warning, including tips on how to fix it.
 
@@ -69,5 +77,5 @@ flutter test --machine | tojunit
 License and contributors
 ------------------------
 
-* The MIT License, see [LICENSE](https://github.com/derteufelqwe/dart-junitreport /raw/master/LICENSE).
-* For contributors, see [AUTHORS](https://github.com/derteufelqwe/dart-junitreport /raw/master/AUTHORS).
+* The MIT License, see [LICENSE](https://github.com/derteufelqwe/dart-junitreport/raw/master/LICENSE).
+* For contributors, see [AUTHORS](https://github.com/derteufelqwe/dart-junitreport/raw/master/AUTHORS).

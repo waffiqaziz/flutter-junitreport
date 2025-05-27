@@ -7,8 +7,8 @@ import 'dart:math';
 import 'package:intl/intl.dart';
 import 'package:xml/xml.dart';
 import 'package:testreport/testreport.dart';
-import 'package:junitreporter_flutter_3x/junitreporter_flutter_3x.dart';
-import 'package:junitreporter_flutter_3x/src/impl/xml.dart';
+import 'package:flutter_junitreport/flutter_junitreport.dart';
+import 'package:flutter_junitreport/src/impl/xml.dart';
 
 class XmlReport implements JUnitReport {
   static final NumberFormat _milliseconds = NumberFormat('#####0.00#', 'en_US');
@@ -100,7 +100,11 @@ class XmlReport implements JUnitReport {
     var splits = path.split('/');
     var testIdx = max(0, splits.indexOf('test'));
 
-    return splits.sublist(testIdx).join('/').replaceAll(_pathSeparator, '.').replaceAll(_dash, '_');
+    return splits
+        .sublist(testIdx)
+        .join('/')
+        .replaceAll(_pathSeparator, '.')
+        .replaceAll(_dash, '_');
   }
 
   List<XmlNode> _suiteChildren(
