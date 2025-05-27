@@ -9,7 +9,12 @@ Introduction
 ------------
 
 This application can be used to convert the results of dart tests to JUnit xml reports. These XML reports can then be used by other tools like Jenkins CI.
-It is a fork from <https://github.com/TOPdesk/dart-flutter_junitreport> and <https://github.com/derteufelqwe/dart-junitreport>, which seems to not be maintained anymore.
+It is a fork from 
+
+* <https://github.com/TOPdesk/dart-flutter_junitreport>
+* <https://github.com/derteufelqwe/dart-junitreport>
+
+which seems to not be maintained anymore.
 
 By running
 
@@ -77,5 +82,5 @@ flutter test --machine | tojunit
 License and contributors
 ------------------------
 
-* The MIT License, see [LICENSE](https://github.com/derteufelqwe/dart-junitreport/raw/master/LICENSE).
-* For contributors, see [AUTHORS](https://github.com/derteufelqwe/dart-junitreport/raw/master/AUTHORS).
+* The MIT License, see [LICENSE](LICENSE).
+* For contributors, see [AUTHORS](AUTHORS).
