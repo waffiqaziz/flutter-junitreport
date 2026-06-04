@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.7-dev.3
+
+* Fixed dependencies
+
 ## 2.0.7-dev.2
 
 * Fixed dependencies

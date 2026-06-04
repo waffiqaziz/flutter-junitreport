@@ -19,3 +19,6 @@ doc/api/
 /tool/actual.xml
 
 publish.ps1
+
+# FVM Version Cache
+.fvm/

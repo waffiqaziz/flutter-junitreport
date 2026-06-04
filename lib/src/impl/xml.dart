@@ -49,4 +49,4 @@ final _highlyDiscouraged = RegExp(
 String _mapDiscouraged(Match match) =>
     match.group(0)!.codeUnits.map((unit) => '&#$unit;').join();
 
-XmlName _name(String name) => XmlName.fromString(name);
+XmlName _name(String name) => XmlName.qualified(name);
